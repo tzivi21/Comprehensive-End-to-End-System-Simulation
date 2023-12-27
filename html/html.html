@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <title>Document</title>
+</head>
+
+<body dir="ltr">
+  <template id="sighin">
+    <div id="sighin1" class="forms page">
+      <div id="form1" class="modal">
+        <form>
+          <h2>register to enter</h2>
+          <p id="exist" class="pop-messege">This user name is already exist in our system,<br>please enter a new name
+          </p>
+          <p>Fill in the following form to enter the system</p>
+          <label for="name"><b>User name</b></label><br>
+          <input type="text" placeholder="Enter name" name="name" id="name1" required><br>
+          <label for="email"><b>email</b></label><br>
+          <input type="email" placeholder="Enter Email" name="email" id="email1" required>
+          <br>
+          <label for="psw"><b>password</b></label><br>
+          <input type="password" placeholder="Enter Password" name="psw" id="password1" required>
+          <br>
+          <p>By creating an account you agree to the site's terms</p>
+          <p> If you already have an account<a class="link" data-target="login" id="connect"> click here</a> in order to
+            log in</p>
+          <div id="clearfix">
+            <button id="signupbtn" class="link" data-target="toDoList" type="submit">sigh in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </template>
+  <template id="login">
+    <div id="login1" class="forms page">
+      <div id="form2" class="modal">
+        <form>
+          <h2>log in to enter</h2>
+          <p id="wrongAccount" class="pop-messege">The user name or password is incorrect</p>
+          <label for="name"><b>user name</b></label><br>
+          <input type="text" placeholder="Enter name" name="name" id="name2" required><br>
+          <label for="psw"><b>password</b></label><br>
+          <input type="password" placeholder="Enter Password" name="psw" id="password2" required>
+          <br>
+
+          <p>Don't have an account yet? </p><a class="link" data-target="sighin" id="returnToForm1">sigh in now⬅️</a>
+          <div id="clearfix">
+            <button class="link" data-target="toDoList" type="submit" id="loginbtn">log in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </template>
+  <template id="toDoList">
+    <div id="opacity">
+      <div id="toDoList1" class="page">
+        <nav id="nav">
+          <h1 id="title">My To Do List</h1>
+          <div id="rightSide">
+            <p id="current-user"></p>
+            <button class="link" id="logout" data-target="login">lougout
+            </button>
+          </div>
+        </nav>
+        <div id="main">
+          <div id="Unfinished-Tasks">
+            <h2>Unfinished Tasks</h2>
+          </div>
+          <div id="addTask">
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div id="Finished">
+            <h2>Finished Tasks</h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="formAddTask" class="form-style-6">
+      <h1>Add Task</h1>
+      <form id="form1" dir="ltr">
+        <input id="taskTitle" type="text" name="field1" placeholder="Task name" />
+        <textarea id="Description" name="field3" placeholder="Description"></textarea>
+        <input id="buttonAdd" type="button" value="add to your list" />
+      </form>
+    </div>
+    <div id="form-change-task"  class="form-style-6">
+      <h1>Edit Task</h1>
+      <form id="form2" dir="ltr">
+        <input id="newTitle" type="text" name="field1"  />
+        <textarea id="newDescription" name="field3" ></textarea>
+        <input id="buttonSaveChange" type="button" value="save changes" />
+      </form>
+    </div>
+  </template>
+  <main>
+
+  </main>
+  <script src="../js/FAJAX.js"></script>
+  <script src="../js/DataBase.js"></script>
+  <script src="../js/server.js"></script>
+  <script src="../js/client.js"></script>
+  <script src="../js/network.js"></script>
+</body>
+
+</html>
